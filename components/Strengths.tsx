@@ -2,16 +2,16 @@ import Reveal from "./Reveal";
 
 const strengths = [
   {
-    number: "01", label: "VIDEO EDITING", title: "動画編集",
-    text: "広告・PR・講義動画を中心に、カット、テロップ、BGM・SE、テンポ設計まで対応。内容の伝わりやすさを重視します。",
+    number: "01", label: "ADVERTISING", title: "広告運用 × 訴求設計",
+    text: "広告運用経験を活かし、ターゲット・訴求・媒体特性から逆算してクリエイティブを設計します。",
   },
   {
-    number: "02", label: "ADVERTISING / MARKETING", title: "広告運用・マーケティング視点",
-    text: "Meta広告・Google広告の運用経験を活かし、ターゲットと訴求から逆算してクリエイティブを設計します。",
+    number: "02", label: "CREATIVE", title: "領域を横断する制作",
+    text: "映像・デザイン・Webを横断し、企画から編集、UI設計、実装まで目的に合う形へまとめます。",
   },
   {
-    number: "03", label: "AI PRODUCTION", title: "AI活用制作",
-    text: "画像・動画・音声生成を、制作スピードと表現の幅を広げる補助ツールとして活用します。",
+    number: "03", label: "AI WORKFLOW", title: "AIを組み込んだ制作フロー",
+    text: "生成AIを取り入れ、制作効率化と表現の拡張につなげます。生成した素材も編集・デザインで仕上げます。",
   },
 ];
 
@@ -19,7 +19,7 @@ export default function Strengths() {
   return (
     <article id="strengths" className="info-column strengths-panel">
       <Reveal>
-        <header className="info-heading"><span>06</span><h2>STRENGTHS</h2><p>強み</p></header>
+        <header className="info-heading"><span>＋</span><h2>STRENGTHS</h2><p>強み</p></header>
         <div className="strength-list">
           {strengths.map((item) => (
             <div className="strength-item" key={item.number}>

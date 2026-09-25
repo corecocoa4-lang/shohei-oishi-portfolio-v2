@@ -5,21 +5,23 @@ import Reveal from "./Reveal";
 import SectionTitle from "./SectionTitle";
 
 export default function AiProjects() {
+  const order = ["mogu-concept", "aura-concept", "lumen-concept", "volt-concept", "etoile-concept", "claru-task-concept"];
+  const works = [...aiWorks].sort((a, b) => order.indexOf(a.slug) - order.indexOf(b.slug));
   return (
-    <section className="section section--ai" aria-labelledby="ai-title">
+    <section id="ai" className="section section--ai" aria-labelledby="ai-title">
       <div className="site-container">
         <Reveal>
-          <div id="ai-title"><SectionTitle title="AI VIDEO / EXPERIMENTS" jp="AIを活用した映像表現・自主制作" index="03" /></div>
-          <p className="section-intro">生成AIを制作工程の一部に取り入れた自主制作作品です。企画・構成・ビジュアル生成・動画生成・編集まで行い、広告・映像制作における新しい表現方法を研究しています。</p>
+          <div id="ai-title"><SectionTitle title="AI CREATIVE" jp="生成AIを活用した映像制作" index="03" /></div>
+          <p className="section-intro">企画・生成から編集、モーション、デザイン、仕上げまで。生成AIを制作工程に組み込み、広告や映像として伝わる形に仕上げています。</p>
         </Reveal>
         <div className="ai-grid">
-          {aiWorks.map((work) => (
-            <Reveal key={work.id}>
+          {works.map((work, index) => (
+            <Reveal key={work.id} className={index < 2 ? "ai-grid__featured" : ""}>
               <Link className="ai-card" href={`/works/${work.slug}`}>
                 <div className={`media-placeholder media-placeholder--ai ${work.tone}`}>
                   <Image src={work.thumbnail} alt={`${work.title}のサムネイル`} fill sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 33vw" />
                   <span className="image-shade" />
-                  <span className="ai-marker">EXPERIMENT / {work.id}</span>
+                  <span className="ai-marker">AI CREATIVE / {work.id}</span>
                   <span className="play-button play-button--small">▶</span>
                 </div>
                 <p className="eyebrow">{work.category}</p>

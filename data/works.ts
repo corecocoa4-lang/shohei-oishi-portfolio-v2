@@ -160,6 +160,22 @@ export const aiWorks: AiWork[] = [
     objective: "香水の華やかさと繊細な香りのイメージを、視覚表現として印象に残すこと。",
     productionPoint: "暖色の光と舞う花びらを一貫したモチーフにし、商品カットへ自然につながる構成にしました。",
   },
+  {
+    id: "A5", slug: "lumen-concept", title: "Lumen｜学習アプリ CM", category: "EDUCATION APP / CONCEPT CM",
+    description: "AIパーソナル学習アプリを題材に、ブランドの世界観と学ぶ体験を描いたコンセプトCM。",
+    tools: ["Adobe Firefly", "Premiere Pro"], process: ["AI Video", "Editing", "Design"], role: ["AI動画生成", "動画編集", "デザイン"],
+    thumbnail: "/images/works/lumen_ai.webp", video: "/videos/lumen_ai.mp4", tone: "tone-aura",
+    objective: "学習サービスの世界観を短い映像で印象づけること。",
+    productionPoint: "光とロゴのモチーフを通して、学ぶことへの前向きな印象をまとめました。",
+  },
+  {
+    id: "A6", slug: "claru-task-concept", title: "ClaruTask｜SaaS CM", category: "SAAS / SOCIAL AD",
+    description: "タスク管理サービスを題材に、課題から解決までをテンポよく見せるコンセプトCM。",
+    tools: ["Adobe Firefly", "Premiere Pro"], process: ["AI Video", "Editing", "Social Ad"], role: ["AI動画生成", "動画編集", "広告構成"],
+    thumbnail: "/images/works/claru_ai.jpg", video: "/videos/claru_ai.mp4", tone: "tone-motion",
+    objective: "サービスの価値を短尺の広告映像として伝えること。",
+    productionPoint: "課題と解決の対比を軸に、画面の情報量と編集テンポを整理しました。",
+  },
 ];
 
 export const graphicWorks: GraphicWork[] = [

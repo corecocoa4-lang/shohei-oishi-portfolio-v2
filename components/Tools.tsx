@@ -4,32 +4,43 @@ import SectionTitle from "./SectionTitle";
 
 const groups = [
   {
-    label: "MAIN TOOLS",
-    description: "実務で日常的に使用",
+    label: "VIDEO",
+    description: "編集からモーション、最終仕上げまで",
     tools: [
       { name: "Premiere Pro", icon: "/brand-icons/premiere-pro.svg" },
-      { name: "Photoshop", icon: "/brand-icons/photoshop.svg" },
-      { name: "Canva", icon: "/brand-icons/canva.svg", wide: true },
+      { name: "After Effects", icon: "/brand-icons/after-effects.svg" },
     ],
   },
   {
-    label: "OTHER SKILLS",
-    description: "基本操作・制作補助で使用",
+    label: "DESIGN",
+    description: "広告・バナー・UIのビジュアル制作",
     tools: [
-      { name: "After Effects", icon: "/brand-icons/after-effects.svg" },
+      { name: "Photoshop", icon: "/brand-icons/photoshop.svg" },
+      { name: "Canva", icon: "/brand-icons/canva.svg" },
+    ],
+  },
+  {
+    label: "AI CREATIVE",
+    description: "企画・生成・音声・編集素材の制作",
+    tools: [
+      { name: "ChatGPT" },
+      { name: "Kling", icon: "/brand-icons/kling-ai.png" },
+      { name: "Higgsfield" },
+      { name: "Firefly" },
+      { name: "Suno", icon: "/brand-icons/suno.svg" },
+      { name: "ElevenLabs", icon: "/brand-icons/elevenlabs.svg" },
+    ],
+  },
+  {
+    label: "WEB / DEVELOPMENT",
+    description: "デザインから実装・公開まで",
+    tools: [
+      { name: "Next.js" },
+      { name: "Codex" },
+      { name: "GitHub" },
+      { name: "Vercel" },
       { name: "HTML", icon: "/brand-icons/html5.svg" },
       { name: "CSS", icon: "/brand-icons/css3.svg" },
-    ],
-  },
-  {
-    label: "AI PRODUCTION TOOLS",
-    description: "制作工程に応じて活用",
-    tools: [
-      { name: "Kling AI", icon: "/brand-icons/kling-ai.png" },
-      { name: "Google Veo", icon: "/brand-icons/google-veo.svg" },
-      { name: "Seedance", icon: "/brand-icons/seedance.ico" },
-      { name: "Suno", icon: "/brand-icons/suno.svg", wide: true },
-      { name: "ElevenLabs", icon: "/brand-icons/elevenlabs.svg", wide: true },
     ],
   },
 ];
@@ -38,18 +49,17 @@ export default function Tools() {
   return (
     <section id="tools" className="section section--tools" aria-labelledby="tools-title">
       <div className="site-container">
-        <Reveal><div id="tools-title"><SectionTitle title="TOOLS" jp="使用ツール・スキル" index="07" /></div></Reveal>
+        <Reveal><div id="tools-title"><SectionTitle title="TOOLS / SKILLS" jp="用途別の制作ツール" index="07" /></div></Reveal>
         <Reveal>
+          <p className="section-intro">目的に合わせてツールを組み合わせ、企画・制作・実装・公開まで一連のフローを組み立てます。</p>
           <div className="tools-layout">
-            {groups.map((group, index) => (
-              <div className={`brand-tool-group${index === 1 ? " brand-tool-group--sub" : ""}${index === 2 ? " brand-tool-group--ai" : ""}`} key={group.label}>
+            {groups.map((group) => (
+              <div className="brand-tool-group" key={group.label}>
                 <header><p>{group.label}</p><span>{group.description}</span></header>
                 <ul>
                   {group.tools.map((tool) => (
                     <li key={tool.name}>
-                      <span className={`brand-tool-logo${"wide" in tool && tool.wide ? " brand-tool-logo--wide" : ""}`}>
-                        <Image src={tool.icon} alt={`${tool.name} official logo`} width={72} height={44} />
-                      </span>
+                      {"icon" in tool && tool.icon && <Image src={tool.icon} alt="" width={24} height={24} />}
                       <span>{tool.name}</span>
                     </li>
                   ))}

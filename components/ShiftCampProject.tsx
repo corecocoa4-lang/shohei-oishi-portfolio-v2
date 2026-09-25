@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { landingPageWorks } from "@/data/works";
 import Reveal from "./Reveal";
 
 const roastNoteUrl = "https://roast-note-coffee.corecocoa4.chatgpt.site/";
@@ -36,14 +38,14 @@ const thumbnails = [
 
 export default function ShiftCampProject() {
   return (
-    <section className="section section--shift" aria-labelledby="shift-title">
+    <section id="web" className="section section--shift" aria-labelledby="shift-title">
       <div className="site-container">
         <Reveal>
           <div id="shift-title" className="section-title shift-section-title">
             <div className="section-title__main">
-              <span className="shift-section-accent" aria-hidden="true" />
-              <h2>WEB DESIGN / SPECIAL PROJECT</h2>
-              <span className="section-title__jp">注目のWeb制作実績</span>
+              <span className="section-index">05</span>
+              <h2>WEB DESIGN / SPECIAL PROJECTS</h2>
+              <span className="section-title__jp">Web制作・特設プロジェクト</span>
             </div>
             <span className="section-title__line" />
           </div>
@@ -124,6 +126,7 @@ export default function ShiftCampProject() {
                 <p className="eyebrow">01 / LP / WEB DESIGN</p>
                 <span>PERSONAL PROJECT / CONCEPT SITE</span>
               </div>
+              <p className="shift-project__field-label">PROJECT NAME</p>
               <h3>ROAST NOTE</h3>
               <p className="shift-project__subtitle">コーヒー定期便サービス LP</p>
 
@@ -156,17 +159,18 @@ export default function ShiftCampProject() {
 
               <dl className="shift-meta">
                 <div>
+                  <dt>OVERVIEW</dt>
+                  <dd>Coffee Subscription LP / 架空ブランドの企画から申込み導線までを設計</dd>
+                </div>
+                <div>
                   <dt>ROLE</dt>
-                  <dd>企画 / 構成 / Webデザイン / UI設計 / AI活用 / 実装</dd>
+                  <dd>Planning / UI Design / AI Creative / Next.js実装</dd>
                 </div>
                 <div>
                   <dt>TOOLS</dt>
                   <dd>ChatGPT / Images2.5 / Codex / Next.js</dd>
                 </div>
-                <div>
-                  <dt>CATEGORY</dt>
-                  <dd>Web Design / LP / AI Creative</dd>
-                </div>
+                <div><dt>POINT</dt><dd>架空ブランド企画 / LP構成設計 / UIデザイン / AI画像生成 / Next.js実装 / レスポンシブ対応</dd></div>
               </dl>
 
               <a
@@ -175,7 +179,7 @@ export default function ShiftCampProject() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                VIEW PROJECT <span aria-hidden="true">→</span>
+                VIEW DETAIL <span aria-hidden="true">→</span>
               </a>
             </div>
           </article>
@@ -222,6 +226,7 @@ export default function ShiftCampProject() {
                 <p className="eyebrow">02 / LP / WEB DESIGN</p>
                 <span>PERSONAL PROJECT / CONCEPT SITE</span>
               </div>
+              <p className="shift-project__field-label">PROJECT NAME</p>
               <h3>SHIFT CAMP</h3>
               <p className="shift-project__subtitle">オンラインキャリアスクールLP</p>
 
@@ -251,18 +256,16 @@ export default function ShiftCampProject() {
               </div>
 
               <dl className="shift-meta">
+                <div><dt>OVERVIEW</dt><dd>Online Career School LP / 未経験者向けサービスのCV導線設計</dd></div>
                 <div>
                   <dt>ROLE</dt>
-                  <dd>企画 / 構成 / デザイン / AI活用 / 実装</dd>
+                  <dd>Planning / UI Design / AI Creative / Next.js実装</dd>
                 </div>
                 <div>
                   <dt>TOOLS</dt>
                   <dd>Figma / ChatGPT / Image Generation / Codex</dd>
                 </div>
-                <div>
-                  <dt>CATEGORY</dt>
-                  <dd>Web Design / LP / AI Creative</dd>
-                </div>
+                <div><dt>POINT</dt><dd>キャリアスクールLP / CV導線設計 / UIデザイン / AI画像活用 / Next.js実装</dd></div>
               </dl>
 
               <a
@@ -271,10 +274,23 @@ export default function ShiftCampProject() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                VIEW PROJECT <span aria-hidden="true">→</span>
+                VIEW DETAIL <span aria-hidden="true">→</span>
               </a>
             </div>
           </article>
+        </Reveal>
+        <Reveal>
+          <div className="web-archive">
+            <div className="web-archive__heading"><span>LP DESIGN ARCHIVE</span><p>既存のLP制作実績</p></div>
+            <div className="web-archive__grid">
+              {landingPageWorks.map((work) => (
+                <Link key={work.id} href={`/lp/${work.slug}`} className="web-archive__item">
+                  <span className="web-archive__preview"><Image src={work.image} alt={`${work.title}のデザイン`} width={work.width} height={work.height} sizes="(max-width: 767px) 42vw, 15vw" /></span>
+                  <span><small>{work.type}</small><strong>{work.title}</strong><em>VIEW DETAIL ↗</em></span>
+                </Link>
+              ))}
+            </div>
+          </div>
         </Reveal>
       </div>
     </section>

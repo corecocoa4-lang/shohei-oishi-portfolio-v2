@@ -6,9 +6,9 @@ import SectionTitle from "./SectionTitle";
 
 export default function VideoProjects() {
   const displayOrder = [
+    "katikuri-service",
     "dmm-aquarium-01",
     "dmm-aquarium-02",
-    "katikuri-service",
     "tokuten-course",
     "business-social-video",
     "kokyou-event",
@@ -18,12 +18,12 @@ export default function VideoProjects() {
     .filter((work) => !work.featured)
     .sort((a, b) => (orderBySlug.get(a.slug) ?? Number.MAX_SAFE_INTEGER) - (orderBySlug.get(b.slug) ?? Number.MAX_SAFE_INTEGER));
   return (
-    <section id="works" className="section section--projects" aria-labelledby="video-title">
+    <section id="video" className="section section--projects" aria-labelledby="video-title">
       <div className="site-container">
-        <Reveal><div id="video-title"><SectionTitle title="VIDEO PROJECTS" jp="映像制作実績" index="02" /></div></Reveal>
+        <Reveal><div id="video-title"><SectionTitle title="VIDEO WORKS" jp="映像制作" index="02" /></div></Reveal>
         <div className="video-grid">
-          {projectWorks.map((work) => (
-            <Reveal key={work.id}>
+          {projectWorks.map((work, index) => (
+            <Reveal key={work.id} className={index < 2 ? "video-grid__featured" : ""}>
               <Link className="work-card" href={`/works/${work.slug}`}>
                 <div className={`media-placeholder ${work.tone}`}>
                   <Image src={work.thumbnail} alt={`${work.title}のサムネイル`} fill sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 25vw" />
@@ -42,7 +42,7 @@ export default function VideoProjects() {
             </Reveal>
           ))}
         </div>
-        <Reveal><div className="section-end"><span>各作品を選択すると動画を再生できます</span><Link className="text-link" href="#works">映像制作実績 <b>↑</b></Link></div></Reveal>
+        <Reveal><div className="section-end"><span>各作品を選択すると動画を再生できます</span><Link className="text-link" href="#video">映像制作実績 <b>↑</b></Link></div></Reveal>
       </div>
     </section>
   );

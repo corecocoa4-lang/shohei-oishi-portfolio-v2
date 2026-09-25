@@ -16,7 +16,7 @@ export default function Profile() {
             />
           </figure>
           <div className="profile-content">
-            <header className="info-heading"><span>05</span><h2>PROFILE</h2><p>プロフィール</p></header>
+            <header className="info-heading"><span>06</span><h2>PROFILE</h2><p>プロフィール</p></header>
             <div className="profile-identity">
               <div><h3>大石 翔平</h3><p>SHOHEI OISHI</p><small>Video Editor / Creative Designer</small></div>
             </div>

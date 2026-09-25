@@ -12,7 +12,7 @@ export default function Hero() {
           <p className="eyebrow hero-role">VISUAL CREATOR <span>/</span> CREATIVE DESIGNER</p>
           <h1>SHOHEI<br className="mobile-only" /> OISHI</h1>
           <p className="hero-tagline"><span>映像・デザイン・AIで、</span><wbr />伝わる形をつくる。</p>
-          <p className="hero-capabilities">Video / Design / AI Creative / Advertising</p>
+          <p className="hero-capabilities">VIDEO / DESIGN / AI CREATIVE / ADVERTISING</p>
           <div className="hero-description">
             <p>広告・プロモーション映像を中心に、動画編集、バナー・Webデザイン、生成AIを活用したクリエイティブ制作に取り組んでいます。</p>
             <p>Meta広告・Google広告の運用経験を活かし、ターゲットや訴求を意識した、目的に合うクリエイティブ設計・制作を大切にしています。</p>

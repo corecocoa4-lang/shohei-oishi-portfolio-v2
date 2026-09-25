@@ -6,11 +6,11 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "sw
 const noto = Noto_Sans_JP({ subsets: ["latin"], variable: "--font-noto", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "SHOHEI OISHI | Video Editor / Creative Designer",
-  description: "広告・マーケティング視点を持つ動画編集者、大石翔平の就職・転職活動用ポートフォリオ。",
+  title: "SHOHEI OISHI Portfolio V2 | Video / Design / AI Creative",
+  description: "映像・デザイン・広告・AIを横断して制作する大石翔平のポートフォリオ。",
   openGraph: {
-    title: "SHOHEI OISHI | Video Editor / Creative Designer",
-    description: "映像で、伝える力を最大化する。動画編集・広告クリエイティブ・マーケティングのポートフォリオ。",
+    title: "SHOHEI OISHI Portfolio V2 | Video / Design / AI Creative",
+    description: "映像・デザイン・広告・AIを横断して制作する大石翔平のポートフォリオ。",
     type: "website",
   },
 };

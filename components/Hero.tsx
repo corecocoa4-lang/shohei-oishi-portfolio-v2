@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section id="top" className="hero">
       <div className="hero-visual" aria-hidden="true">
-        <Image src="/images/hero-editor.png" alt="" fill priority sizes="(max-width: 768px) 100vw, 62vw" />
+        <Image src="/images/hero-editor.webp" alt="" fill priority sizes="(max-width: 768px) 100vw, 62vw" />
       </div>
       <div className="site-container hero-inner">
         <div className="hero-copy">

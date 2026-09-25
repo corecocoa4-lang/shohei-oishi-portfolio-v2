@@ -1,0 +1,10 @@
+.vercel
+.openai
+.next
+dist
+out
+node_modules
+.pnpm-store
+work
+outputs
+*.log

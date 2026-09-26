@@ -12,7 +12,7 @@ export default function Tools() {
   return (
     <section id="tools" className="section section--tools" aria-labelledby="tools-title">
       <div className="site-container">
-        <Reveal><div id="tools-title"><SectionTitle title="TOOLS / SKILLS" jp="制作領域・使用ツール" index="07" /></div></Reveal>
+        <Reveal><div id="tools-skills"><div id="tools-title"><SectionTitle title="TOOLS / SKILLS" jp="制作領域・使用ツール" index="07" /></div></div></Reveal>
         <Reveal>
           <p className="section-intro">目的に合わせてツールを組み合わせ、企画・制作・実装・公開まで一連のフローを組み立てています。</p>
           <div className="tools-layout">

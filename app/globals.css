@@ -5,6 +5,7 @@
 :root { --bg:#070b0f; --panel:#0b1118; --panel-2:#0d151e; --text:#f1f4f6; --muted:#8d9aa8; --line:#263241; --accent:#79b8ff; --header:72px; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; background:var(--bg); }
+#works,#profile,#tools-skills { scroll-margin-top:calc(var(--header) + 24px); }
 body { margin:0; color:var(--text); background:var(--bg); font-family:var(--font-inter),var(--font-noto),sans-serif; font-feature-settings:"palt"; letter-spacing:.01em; }
 a { color:inherit; text-decoration:none; }
 button { color:inherit; font:inherit; }

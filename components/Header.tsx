@@ -2,12 +2,15 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const nav = [
-  ["WORKS", "#works"], ["ABOUT", "#about"], ["STRENGTHS", "#strengths"], ["TOOLS", "#tools"],
+  ["WORKS", "#works"], ["PROFILE", "#profile"], ["TOOLS", "#tools-skills"],
 ];
 
 export default function Header() {
+  const pathname = usePathname();
+  const sectionHref = (hash: string) => pathname === "/" ? hash : `/${hash}`;
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -21,17 +24,17 @@ export default function Header() {
   return (
     <header className={`site-header ${scrolled ? "site-header--scrolled" : ""} ${open ? "site-header--open" : ""}`}>
       <div className="site-container header-inner">
-        <Link className="wordmark" href="#top" onClick={() => setOpen(false)}>SHOHEI OISHI</Link>
+        <Link className="wordmark" href={sectionHref("#top")} onClick={() => setOpen(false)}>SHOHEI OISHI</Link>
         <button className="menu-button" type="button" aria-label="メニューを開閉" aria-expanded={open} onClick={() => setOpen(!open)}>
           <span /><span />
         </button>
         <nav className="desktop-nav" aria-label="メインナビゲーション">
-          {nav.map(([label, href]) => <Link key={label} href={href}>{label}</Link>)}
+          {nav.map(([label, href]) => <Link key={label} href={sectionHref(href)}>{label}</Link>)}
         </nav>
       </div>
       <nav className="mobile-nav" aria-label="モバイルナビゲーション">
         {nav.map(([label, href], index) => (
-          <Link key={label} href={href} onClick={() => setOpen(false)}><span>0{index + 1}</span>{label}</Link>
+          <Link key={label} href={sectionHref(href)} onClick={() => setOpen(false)}><span>0{index + 1}</span>{label}</Link>
         ))}
       </nav>
     </header>

@@ -18,8 +18,8 @@ export default function Hero() {
             <p>Meta広告・Google広告の運用経験を活かし、ターゲットや訴求を意識した、目的に合うクリエイティブ設計・制作を大切にしています。</p>
           </div>
           <div className="hero-actions">
-            <Link className="button button--solid" href="/works/gift-promotion"><span className="play-small">▶</span> SHOWREELを見る</Link>
-            <Link className="text-link" href="#works">作品を見る <span>↘</span></Link>
+            <Link className="button button--solid" href="#works">WORKSを見る <span>↓</span></Link>
+            <Link className="text-link" href="#profile">PROFILE <span>→</span></Link>
           </div>
         </div>
         <div className="hero-side-label" aria-hidden="true"><span>SCROLL</span><i /></div>

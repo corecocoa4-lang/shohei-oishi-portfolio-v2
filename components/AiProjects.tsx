@@ -5,8 +5,8 @@ import Reveal from "./Reveal";
 import SectionTitle from "./SectionTitle";
 
 export default function AiProjects() {
-  const order = ["mogu-concept", "aura-concept", "lumen-concept", "volt-concept", "etoile-concept", "claru-task-concept"];
-  const works = [...aiWorks].sort((a, b) => order.indexOf(a.slug) - order.indexOf(b.slug));
+  const order = ["katikuri-ai", "mogu-concept", "volt-concept", "aura-concept", "etoile-concept", "claru-task-concept"];
+  const works = aiWorks.filter((work) => order.includes(work.slug)).sort((a, b) => order.indexOf(a.slug) - order.indexOf(b.slug));
   return (
     <section id="ai" className="section section--ai" aria-labelledby="ai-title">
       <div className="site-container">
@@ -19,7 +19,7 @@ export default function AiProjects() {
             <Reveal key={work.id} className={index < 2 ? "ai-grid__featured" : ""}>
               <Link className="ai-card" href={`/works/${work.slug}`}>
                 <div className={`media-placeholder media-placeholder--ai ${work.tone}`}>
-                  <Image src={work.thumbnail} alt={`${work.title}のサムネイル`} fill sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 33vw" />
+                  <Image src={work.thumbnail} alt={`${work.title}のサムネイル`} fill sizes={`(max-width: 767px) 100vw, (max-width: 1100px) 50vw, ${index < 2 ? "50vw" : "25vw"}`} />
                   <span className="image-shade" />
                   <span className="ai-marker">AI CREATIVE / {work.id}</span>
                   <span className="play-button play-button--small">▶</span>

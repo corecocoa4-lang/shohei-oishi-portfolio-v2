@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import { landingPageWorks } from "@/data/works";
 import Reveal from "./Reveal";
 
 const roastNoteUrl = "https://roast-note-coffee.corecocoa4.chatgpt.site/";
@@ -61,10 +59,11 @@ export default function ShiftCampProject() {
                   <span />
                 </div>
                 <Image
-                  src="/images/roast-note/first-view.png"
+                  src="/images/roast-note/roast_note_fv01.png"
                   alt="ROAST NOTE ランディングページのファーストビュー"
                   width={1900}
-                  height={874}
+                  height={870}
+                  style={{ aspectRatio: "1900 / 874", objectFit: "contain" }}
                   sizes="(max-width: 900px) calc(100vw - 84px), 61vw"
                 />
               </div>
@@ -278,19 +277,6 @@ export default function ShiftCampProject() {
               </a>
             </div>
           </article>
-        </Reveal>
-        <Reveal>
-          <div className="web-archive">
-            <div className="web-archive__heading"><span>LP DESIGN ARCHIVE</span><p>既存のLP制作実績</p></div>
-            <div className="web-archive__grid">
-              {landingPageWorks.map((work) => (
-                <Link key={work.id} href={`/lp/${work.slug}`} className="web-archive__item">
-                  <span className="web-archive__preview"><Image src={work.image} alt={`${work.title}のデザイン`} width={work.width} height={work.height} sizes="(max-width: 767px) 42vw, 15vw" /></span>
-                  <span><small>{work.type}</small><strong>{work.title}</strong><em>VIEW DETAIL ↗</em></span>
-                </Link>
-              ))}
-            </div>
-          </div>
         </Reveal>
       </div>
     </section>

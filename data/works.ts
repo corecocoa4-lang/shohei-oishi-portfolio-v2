@@ -66,16 +66,6 @@ export const videoWorks: VideoWork[] = [
     featured: true,
   },
   {
-    id: "01",
-    slug: "katikuri-service",
-    title: "サービス紹介アニメーション",
-    category: "PROMOTION",
-    description: "企業が抱える課題をイラストとテキストで整理し、サービス内容を分かりやすく伝える紹介動画。",
-    tools: ["Premiere Pro", "After Effects"], role: ["動画編集", "構成", "テロップ", "簡単なアニメーション"], duration: "01:13", thumbnail: "/images/works/katikuri.jpg", video: "/videos/katikuri.mp4", tone: "tone-motion",
-    objective: "サービスの必要性と特徴を、視覚的に理解しやすい構成で伝えること。",
-    productionPoint: "説明の流れに合わせてイラストとテキストを展開し、情報量を整理しました。",
-  },
-  {
     id: "02",
     slug: "tokuten-course",
     title: "講座プロモーション動画",
@@ -129,6 +119,14 @@ export const videoWorks: VideoWork[] = [
 
 export const aiWorks: AiWork[] = [
   {
+    id: "A7", slug: "katikuri-ai", title: "カチクリ", category: "AI × Motion / Advertising",
+    description: "広告支援サービスのCMを再構成。生成AIとAfter Effectsを組み合わせ、ビジュアル制作からモーション演出まで制作。",
+    tools: ["生成AI", "After Effects"], process: ["AI Visual", "After Effects", "Motion"], role: ["ビジュアル制作", "モーション演出"],
+    duration: "00:32", thumbnail: "/images/works/katikuri_sam.jpg", video: "/videos/katikuri-ai.mp4", tone: "tone-motion",
+    objective: "広告支援サービスのCMを再構成し、サービスの魅力を映像で伝えること。",
+    productionPoint: "生成AIとAfter Effectsを組み合わせ、ビジュアル制作からモーション演出まで制作しました。",
+  },
+  {
     id: "A1", slug: "volt-concept", title: "VOLT｜Concept CM", category: "PRODUCT CONCEPT",
     description: "雨の都市を舞台に、スピード感と機能性を表現したシューズブランドのコンセプトCM。",
     tools: ["Kling 3.0", "Premiere Pro"], process: ["Planning", "AI Video", "Editing"], role: ["企画", "AI動画生成", "動画編集"],
@@ -140,7 +138,7 @@ export const aiWorks: AiWork[] = [
     id: "A2", slug: "mogu-concept", title: "MOGU｜Concept CM", category: "FOOD DELIVERY / CONCEPT CM",
     description: "フードデリバリーサービスを題材に、注文から配達までの体験をテンポよく描いたコンセプトCM。生成AIによる映像制作に加え、Premiere ProとAfter Effectsを使用して編集・演出を行い、実際のWeb広告を想定して制作しています。",
     tools: ["Premiere Pro", "After Effects"], process: ["Planning", "AI Video", "Premiere Pro", "After Effects"], role: ["Planning", "AI Video", "Premiere Pro", "After Effects"],
-    duration: "00:15", thumbnail: "/images/works/mogu_ai.jpg", video: "/videos/mogu_ai.mp4", tone: "tone-music",
+    duration: "00:15", thumbnail: "/images/works/mogu_sam.jpg", video: "/videos/mogu_ai.mp4", tone: "tone-music",
     objective: "フードデリバリーの注文から配達までの便利さと楽しさを、短いWeb広告として印象的に伝えること。",
     productionPoint: "注文、配達、受け取りの流れをテンポよくつなぎ、Premiere ProとAfter Effectsで広告らしい編集・演出に整えました。",
   },
@@ -180,9 +178,7 @@ export const aiWorks: AiWork[] = [
 
 export const graphicWorks: GraphicWork[] = [
   { id: "G1", slug: "housing-loan-ad", category: "BANNER / WEB AD", title: "住宅ローン｜Web広告バナー", target: "30〜50代", tool: "Photoshop", image: "/images/banners/hataraku-01.webp" },
-  { id: "G2", slug: "power-stone-course-ad", category: "BANNER / SNS AD", title: "パワーストーン講座｜広告バナー", target: "30〜50代女性", tool: "Photoshop", image: "/images/banners/power-stone.webp", visible: false },
   { id: "G3", slug: "subconscious-coaching-ad", category: "BANNER / SNS AD", title: "コーチ養成講座｜SNS広告バナー", target: "20〜40代女性", tool: "Photoshop", image: "/images/banners/senzai-01.webp" },
-  { id: "G4", slug: "zone-meditation-ad", category: "BANNER / SNS AD", title: "潜在意識講座｜広告バナー", target: "20〜40代女性", tool: "Photoshop", image: "/images/banners/zone-meditation.webp", visible: false },
   { id: "G5", slug: "zone-program-ad", category: "BANNER / SNS AD", title: "自己覚醒プログラム｜広告バナー", target: "20〜40代女性", tool: "Photoshop", image: "/images/banners/zone-01.webp" },
   { id: "G6", slug: "global-business-ad", category: "BANNER / WEB AD", title: "ビジネス講座｜広告バナー", target: "30〜50代", tool: "Photoshop", image: "/images/banners/business-01.webp" },
 ];

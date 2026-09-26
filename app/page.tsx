@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import FeaturedWork from "@/components/FeaturedWork";
 import VideoProjects from "@/components/VideoProjects";
 import AiProjects from "@/components/AiProjects";
 import GraphicProjects from "@/components/GraphicProjects";
@@ -15,7 +14,6 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <FeaturedWork />
         <VideoProjects />
         <AiProjects />
         <GraphicProjects />

@@ -6,8 +6,8 @@ import SectionTitle from "./SectionTitle";
 
 export default function VideoProjects() {
   const displayOrder = [
-    "katikuri-service",
     "dmm-aquarium-01",
+    "gift-promotion",
     "dmm-aquarium-02",
     "tokuten-course",
     "business-social-video",
@@ -15,18 +15,18 @@ export default function VideoProjects() {
   ];
   const orderBySlug = new Map(displayOrder.map((slug, index) => [slug, index]));
   const projectWorks = videoWorks
-    .filter((work) => !work.featured)
+    .filter((work) => orderBySlug.has(work.slug))
     .sort((a, b) => (orderBySlug.get(a.slug) ?? Number.MAX_SAFE_INTEGER) - (orderBySlug.get(b.slug) ?? Number.MAX_SAFE_INTEGER));
   return (
     <section id="video" className="section section--projects" aria-labelledby="video-title">
-      <div className="site-container">
-        <Reveal><div id="video-title"><SectionTitle title="VIDEO WORKS" jp="映像制作" index="02" /></div></Reveal>
+      <div id="works" className="site-container">
+        <Reveal><div id="video-title"><SectionTitle title="VIDEO WORKS" jp="映像制作実績" index="02" /></div></Reveal>
         <div className="video-grid">
           {projectWorks.map((work, index) => (
             <Reveal key={work.id} className={index < 2 ? "video-grid__featured" : ""}>
               <Link className="work-card" href={`/works/${work.slug}`}>
                 <div className={`media-placeholder ${work.tone}`}>
-                  <Image src={work.thumbnail} alt={`${work.title}のサムネイル`} fill sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 25vw" />
+                  <Image src={work.thumbnail} alt={`${work.title}のサムネイル`} fill sizes={`(max-width: 767px) 100vw, (max-width: 1100px) 50vw, ${index < 2 ? "50vw" : "25vw"}` } />
                   <span className="image-shade" />
                   <span className="media-number">{work.id}</span>
                   <span className="play-button play-button--small">▶</span>

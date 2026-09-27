@@ -122,7 +122,7 @@ export const aiWorks: AiWork[] = [
     id: "A7", slug: "katikuri-ai", title: "カチクリ", category: "AI × Motion / Advertising",
     description: "広告支援サービスのCMを再構成。生成AIとAfter Effectsを組み合わせ、ビジュアル制作からモーション演出まで制作。",
     tools: ["生成AI", "After Effects"], process: ["AI Visual", "After Effects", "Motion"], role: ["ビジュアル制作", "モーション演出"],
-    duration: "00:32", thumbnail: "/images/works/katikuri_sam.jpg", video: "/videos/katikuri-ai.mp4", tone: "tone-motion",
+    duration: "00:32", thumbnail: "/images/works/katikuri_sam.jpg", video: "/videos/katikuri2.mp4", tone: "tone-motion",
     objective: "広告支援サービスのCMを再構成し、サービスの魅力を映像で伝えること。",
     productionPoint: "生成AIとAfter Effectsを組み合わせ、ビジュアル制作からモーション演出まで制作しました。",
   },

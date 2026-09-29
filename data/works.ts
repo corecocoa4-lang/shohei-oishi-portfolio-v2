@@ -127,6 +127,14 @@ export const aiWorks: AiWork[] = [
     productionPoint: "生成AIとAfter Effectsを組み合わせ、ビジュアル制作からモーション演出まで制作しました。",
   },
   {
+    id: "A8", slug: "shift-camp-cm", title: "SHIFT CAMP", category: "AI × Motion / Advertising",
+    description: "オンラインキャリアスクールの15秒CM。LPのブランドトーンを映像へ展開し、構成・絵コンテからモーショングラフィックスまで制作。After Effectsと生成AIを活用し、テンポよくメッセージが伝わる広告表現を目指しました。",
+    tools: ["After Effects", "ChatGPT", "Higgsfield", "Generative AI"], process: ["Planning", "Storyboard", "After Effects", "Generative AI"], role: ["構成", "絵コンテ", "モーショングラフィックス"],
+    duration: "00:15", thumbnail: "/images/works/shiftcamp_cm_thumb.jpg", video: "/videos/shiftcamp_cm.mp4", tone: "tone-motion",
+    objective: "オンラインキャリアスクールのメッセージを、15秒の広告映像で伝えること。",
+    productionPoint: "LPのブランドトーンを映像へ展開し、テンポよくメッセージが伝わるモーショングラフィックスに仕上げました。",
+  },
+  {
     id: "A1", slug: "volt-concept", title: "VOLT｜Concept CM", category: "PRODUCT CONCEPT",
     description: "雨の都市を舞台に、スピード感と機能性を表現したシューズブランドのコンセプトCM。",
     tools: ["Kling 3.0", "Premiere Pro"], process: ["Planning", "AI Video", "Editing"], role: ["企画", "AI動画生成", "動画編集"],

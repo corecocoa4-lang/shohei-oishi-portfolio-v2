@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
 import SectionTitle from "./SectionTitle";
 
 export default function AiProjects() {
-  const order = ["katikuri-ai", "mogu-concept", "volt-concept", "aura-concept", "etoile-concept", "claru-task-concept"];
+  const order = ["katikuri-ai", "shift-camp-cm", "mogu-concept", "volt-concept", "aura-concept", "etoile-concept"];
   const works = aiWorks.filter((work) => order.includes(work.slug)).sort((a, b) => order.indexOf(a.slug) - order.indexOf(b.slug));
   return (
     <section id="ai" className="section section--ai" aria-labelledby="ai-title">

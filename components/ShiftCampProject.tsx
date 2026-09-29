@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
 
-const roastNoteUrl = "https://roast-note-coffee.corecocoa4.chatgpt.site/";
+const roastNoteUrl = "https://roast-note-coffee.vercel.app/";
 
 const thumbnails = [
   {
@@ -269,7 +269,7 @@ export default function ShiftCampProject() {
 
               <a
                 className="button shift-project__button"
-                href="https://shift-camp-career.corecocoa4.chatgpt.site/"
+                href="https://shift-camp.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
